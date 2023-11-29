@@ -31,7 +31,7 @@ DotNetWorkQueue.Examples
 - 
 License
 --------
-Copyright (c) 2017 Brian Lehnen
+Copyright (c) 2017-2023 Brian Lehnen
 
 All rights reserved.
 
