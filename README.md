@@ -1,34 +1,30 @@
 DotNetWorkQueue.Examples
 =========
 
+This is the original example code.  It's suggested to look at the sample repo instead, as the samples are more straight forward.
+
+https://github.com/blehnen/DotNetWorkQueue.Samples
+
 [**SQL Server**]
 - Producer - Send Messages via SQL server transport
 - Consumer - Process messages via SQL server transport
 - ConsumerAsync - Process messages via SQL server transport using shared task scheduler
-- RPCProducer - Send a message via SQL server transport and receive a response
-- RPCConsumer - Process a messge via SQL server transport and send a response
 
 [**Redis**]
 - Producer - Send Messages via Redis transport
 - Consumer - Process messages via Redis transport
 - ConsumerAsync - Process messages via Redis transport using shared task scheduler
-- RPCProducer - Send a message via Redis transport and receive a response
-- RPCConsumer - Process a messge via Redis transport and send a response
 
 [**SQLite**]
 - Producer - Send Messages via SQLite transport
 - Consumer - Process messages via SQLite transport
 - ConsumerAsync - Process messages via SQLite transport using shared task scheduler
-- RPCProducer - Send a message via SQLite transport and receive a response
-- RPCConsumer - Process a messge via SQLite transport and send a response
 
 [**PostGre**]
 - Producer - Send Messages via SQL server transport
 - Consumer - Process messages via SQL server transport
 - ConsumerAsync - Process messages via SQL server transport using shared task scheduler
-- RPCProducer - Send a message via SQL server transport and receive a response
-- RPCConsumer - Process a messge via SQL server transport and send a response
-- 
+
 License
 --------
 Copyright (c) 2017-2023 Brian Lehnen
