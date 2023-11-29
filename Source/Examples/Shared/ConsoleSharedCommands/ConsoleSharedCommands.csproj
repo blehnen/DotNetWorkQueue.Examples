@@ -55,16 +55,16 @@
       <HintPath>..\..\packages\App.Metrics.Reporting.Console.4.3.0\lib\netstandard2.0\App.Metrics.Reporting.Console.dll</HintPath>
     </Reference>
     <Reference Include="Aq.ExpressionJsonSerializer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DotNetWorkQueue.0.7.1\lib\net472\Aq.ExpressionJsonSerializer.dll</HintPath>
+      <HintPath>..\..\packages\DotNetWorkQueue.0.7.3\lib\net472\Aq.ExpressionJsonSerializer.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetWorkQueue, Version=0.7.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DotNetWorkQueue.0.7.1\lib\net472\DotNetWorkQueue.dll</HintPath>
+    <Reference Include="DotNetWorkQueue, Version=0.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DotNetWorkQueue.0.7.3\lib\net472\DotNetWorkQueue.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetWorkQueue.AppMetrics, Version=0.7.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DotNetWorkQueue.AppMetrics.0.7.1\lib\net472\DotNetWorkQueue.AppMetrics.dll</HintPath>
+    <Reference Include="DotNetWorkQueue.AppMetrics, Version=0.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DotNetWorkQueue.AppMetrics.0.7.3\lib\net472\DotNetWorkQueue.AppMetrics.dll</HintPath>
     </Reference>
     <Reference Include="JpLabs.DynamicCode, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DotNetWorkQueue.0.7.1\lib\net472\JpLabs.DynamicCode.dll</HintPath>
+      <HintPath>..\..\packages\DotNetWorkQueue.0.7.3\lib\net472\JpLabs.DynamicCode.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -141,7 +141,7 @@
       <HintPath>..\..\packages\Polly.Core.8.2.0\lib\net472\Polly.Core.dll</HintPath>
     </Reference>
     <Reference Include="Schyntax, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DotNetWorkQueue.0.7.1\lib\net472\Schyntax.dll</HintPath>
+      <HintPath>..\..\packages\DotNetWorkQueue.0.7.3\lib\net472\Schyntax.dll</HintPath>
     </Reference>
     <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Serilog.3.1.1\lib\net471\Serilog.dll</HintPath>

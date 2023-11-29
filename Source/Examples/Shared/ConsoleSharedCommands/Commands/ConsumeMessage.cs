@@ -234,10 +234,10 @@ namespace ConsoleSharedCommands.Commands
             var queue = Queues[queueName];
 
             var consumerQueue = queue as IConsumerQueue;
-            consumerQueue?.Start<SimpleMessage>(HandleMessages);
+            consumerQueue?.Start<SimpleMessage>(HandleMessages, CreateNotifications.Create(Log.Logger));
 
             var consumerMethodQueue = queue as IConsumerMethodQueue;
-            consumerMethodQueue?.Start();
+            consumerMethodQueue?.Start(CreateNotifications.Create(Log.Logger));
 
             return new ConsoleExecuteResult($"{queueName} started");
         }

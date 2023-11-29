@@ -28,6 +28,7 @@ using DotNetWorkQueue;
 using DotNetWorkQueue.Configuration;
 using ExampleMessage;
 using Microsoft.Extensions.Logging;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -264,10 +265,10 @@ namespace ConsoleSharedCommands.Commands
             //start looking for work
             var queue = Queues[queueName];
             var consumerQueue = queue as IConsumerQueueScheduler;
-            consumerQueue?.Start<SimpleMessage>(HandleMessages);
+            consumerQueue?.Start<SimpleMessage>(HandleMessages, CreateNotifications.Create(Log.Logger));
 
             var consumerMethodQueue = queue as IConsumerMethodQueueScheduler;
-            consumerMethodQueue?.Start();
+            consumerMethodQueue?.Start(CreateNotifications.Create(Log.Logger));
 
             return new ConsoleExecuteResult($"{queueName} started");
         }
