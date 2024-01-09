@@ -53,25 +53,25 @@
       <HintPath>..\..\..\packages\App.Metrics.Formatters.Json.4.3.0\lib\net461\App.Metrics.Formatters.Json.dll</HintPath>
     </Reference>
     <Reference Include="Aq.ExpressionJsonSerializer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.0.7.3\lib\net472\Aq.ExpressionJsonSerializer.dll</HintPath>
+      <HintPath>..\..\..\packages\DotNetWorkQueue.0.7.4\lib\net472\Aq.ExpressionJsonSerializer.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetWorkQueue, Version=0.7.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.0.7.3\lib\net472\DotNetWorkQueue.dll</HintPath>
+    <Reference Include="DotNetWorkQueue, Version=0.7.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DotNetWorkQueue.0.7.4\lib\net472\DotNetWorkQueue.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetWorkQueue.AppMetrics, Version=0.7.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.AppMetrics.0.7.3\lib\net472\DotNetWorkQueue.AppMetrics.dll</HintPath>
+    <Reference Include="DotNetWorkQueue.AppMetrics, Version=0.7.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DotNetWorkQueue.AppMetrics.0.7.4\lib\net472\DotNetWorkQueue.AppMetrics.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetWorkQueue.Transport.RelationalDatabase, Version=0.7.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.Transport.RelationalDatabase.0.7.3\lib\net472\DotNetWorkQueue.Transport.RelationalDatabase.dll</HintPath>
+    <Reference Include="DotNetWorkQueue.Transport.RelationalDatabase, Version=0.7.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DotNetWorkQueue.Transport.RelationalDatabase.0.7.4\lib\net472\DotNetWorkQueue.Transport.RelationalDatabase.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetWorkQueue.Transport.Shared, Version=0.7.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.Transport.Shared.0.7.3\lib\net472\DotNetWorkQueue.Transport.Shared.dll</HintPath>
+    <Reference Include="DotNetWorkQueue.Transport.Shared, Version=0.7.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DotNetWorkQueue.Transport.Shared.0.7.4\lib\net472\DotNetWorkQueue.Transport.Shared.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetWorkQueue.Transport.SqlServer, Version=0.7.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.Transport.SqlServer.0.7.3\lib\net472\DotNetWorkQueue.Transport.SqlServer.dll</HintPath>
+    <Reference Include="DotNetWorkQueue.Transport.SqlServer, Version=0.7.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DotNetWorkQueue.Transport.SqlServer.0.7.4\lib\net472\DotNetWorkQueue.Transport.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="JpLabs.DynamicCode, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.0.7.3\lib\net472\JpLabs.DynamicCode.dll</HintPath>
+      <HintPath>..\..\..\packages\DotNetWorkQueue.0.7.4\lib\net472\JpLabs.DynamicCode.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -118,23 +118,23 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.Extensions.Primitives.8.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=2.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Microsoft.IO.RecyclableMemoryStream.2.3.2\lib\net462\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.0\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="OpenTelemetry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7bd6737fe5b67e3c, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\OpenTelemetry.1.6.0\lib\net462\OpenTelemetry.dll</HintPath>
+      <HintPath>..\..\..\packages\OpenTelemetry.1.7.0\lib\net462\OpenTelemetry.dll</HintPath>
     </Reference>
     <Reference Include="OpenTelemetry.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7bd6737fe5b67e3c, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\OpenTelemetry.Api.1.6.0\lib\net462\OpenTelemetry.Api.dll</HintPath>
+      <HintPath>..\..\..\packages\OpenTelemetry.Api.1.7.0\lib\net462\OpenTelemetry.Api.dll</HintPath>
     </Reference>
     <Reference Include="OpenTelemetry.Api.ProviderBuilderExtensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7bd6737fe5b67e3c, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\OpenTelemetry.Api.ProviderBuilderExtensions.1.6.0\lib\net462\OpenTelemetry.Api.ProviderBuilderExtensions.dll</HintPath>
+      <HintPath>..\..\..\packages\OpenTelemetry.Api.ProviderBuilderExtensions.1.7.0\lib\net462\OpenTelemetry.Api.ProviderBuilderExtensions.dll</HintPath>
     </Reference>
     <Reference Include="Polly, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Polly.8.2.0\lib\net472\Polly.dll</HintPath>
+      <HintPath>..\..\..\packages\Polly.8.2.1\lib\net472\Polly.dll</HintPath>
     </Reference>
     <Reference Include="Polly.Caching.Memory, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Polly.Caching.Memory.3.0.2\lib\netstandard2.0\Polly.Caching.Memory.dll</HintPath>
@@ -146,13 +146,13 @@
       <HintPath>..\..\..\packages\Polly.Contrib.WaitAndRetry.1.1.1\lib\net472\Polly.Contrib.WaitAndRetry.dll</HintPath>
     </Reference>
     <Reference Include="Polly.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Polly.Core.8.2.0\lib\net472\Polly.Core.dll</HintPath>
+      <HintPath>..\..\..\packages\Polly.Core.8.2.1\lib\net472\Polly.Core.dll</HintPath>
     </Reference>
     <Reference Include="Schyntax, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.0.7.3\lib\net472\Schyntax.dll</HintPath>
+      <HintPath>..\..\..\packages\DotNetWorkQueue.0.7.4\lib\net472\Schyntax.dll</HintPath>
     </Reference>
     <Reference Include="SimpleInjector, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\SimpleInjector.5.4.2\lib\net461\SimpleInjector.dll</HintPath>
+      <HintPath>..\..\..\packages\SimpleInjector.5.4.4\lib\net461\SimpleInjector.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">

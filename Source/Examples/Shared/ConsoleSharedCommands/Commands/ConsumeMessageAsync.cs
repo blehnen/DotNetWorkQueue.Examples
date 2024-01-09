@@ -235,9 +235,9 @@ namespace ConsoleSharedCommands.Commands
             return new ConsoleExecuteResult($"message expiration configuration set for {queueName}");
         }
 
-        public ConsoleExecuteResult AddWorkGroup(QueueConnection queueConnection, ConsumerQueueTypes type, string workGroupName, int concurrencyLevel, int maxQueueSize = 0)
+        public ConsoleExecuteResult AddWorkGroup(QueueConnection queueConnection, ConsumerQueueTypes type, string workGroupName, int concurrencyLevel)
         {
-            CreateModuleIfNeeded(queueConnection, type, workGroupName, concurrencyLevel, maxQueueSize);
+            CreateModuleIfNeeded(queueConnection, type, workGroupName, concurrencyLevel);
             return new ConsoleExecuteResult($"Added workgroup {workGroupName} for queue {queueConnection.Queue}");
         }
 
@@ -324,7 +324,7 @@ namespace ConsoleSharedCommands.Commands
             }
         }
 
-        protected void CreateModuleIfNeeded(QueueConnection queueConnection, ConsumerQueueTypes type = ConsumerQueueTypes.Poco, string workGroupName = null, int concurrencyLevel = 0, int maxQueueSize = 0)
+        protected void CreateModuleIfNeeded(QueueConnection queueConnection, ConsumerQueueTypes type = ConsumerQueueTypes.Poco, string workGroupName = null, int concurrencyLevel = 0)
         {
             if (_taskScheduler == null)
             {
@@ -342,7 +342,7 @@ namespace ConsoleSharedCommands.Commands
                         _taskScheduler.Start();
                     }
 
-                    var group = _taskScheduler.AddWorkGroup(workGroupName, concurrencyLevel, maxQueueSize);
+                    var group = _taskScheduler.AddWorkGroup(workGroupName, concurrencyLevel);
                     switch (type)
                     {
                         case ConsumerQueueTypes.Poco:
