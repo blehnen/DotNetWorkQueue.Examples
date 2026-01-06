@@ -27,7 +27,7 @@ https://github.com/blehnen/DotNetWorkQueue.Samples
 
 License
 --------
-Copyright (c) 2017-2023 Brian Lehnen
+Copyright (c) 2017-2026 Brian Lehnen
 
 All rights reserved.
 

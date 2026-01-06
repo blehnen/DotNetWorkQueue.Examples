@@ -23,10 +23,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 // ---------------------------------------------------------------------
-using System.Collections.Generic;
 using ConsoleShared;
 using DotNetWorkQueue;
-using DotNetWorkQueue.Messages;
+using System.Collections.Generic;
 namespace ConsoleSharedCommands.Commands
 {
     public abstract class SharedSendCommands : SharedCommands
@@ -35,13 +34,7 @@ namespace ConsoleSharedCommands.Commands
         public ConsoleExecuteResult SendMethod(string queueName,
             string method)
         {
-            var valid = ValidateQueue(queueName);
-            if (valid != null) return valid;
-
-            var queue = (IProducerMethodQueue)Queues[queueName];
-            queue.Send(new LinqExpressionToRun(method, new List<string> { "ConsoleSharedCommands.dll" }, new List<string> { "ConsoleSharedCommands.Commands" }));
-
-            return new ConsoleExecuteResult($"Sent method {method}");
+            return new ConsoleExecuteResult("not implemented");
         }
     }
 }
