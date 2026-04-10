@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0" DefaultTargets="Build">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -36,26 +36,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="App.Metrics, Version=4.3.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\App.Metrics.4.3.0\lib\net461\App.Metrics.dll</HintPath>
-    </Reference>
-    <Reference Include="App.Metrics.Abstractions, Version=4.3.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\App.Metrics.Abstractions.4.3.0\lib\net461\App.Metrics.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="App.Metrics.Concurrency, Version=4.3.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\App.Metrics.Concurrency.4.3.0\lib\netstandard2.0\App.Metrics.Concurrency.dll</HintPath>
-    </Reference>
-    <Reference Include="App.Metrics.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\App.Metrics.Core.4.3.0\lib\net461\App.Metrics.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="App.Metrics.Formatters.Ascii, Version=4.3.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\App.Metrics.Formatters.Ascii.4.3.0\lib\net461\App.Metrics.Formatters.Ascii.dll</HintPath>
-    </Reference>
-    <Reference Include="App.Metrics.Formatters.Json, Version=4.3.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\App.Metrics.Formatters.Json.4.3.0\lib\net461\App.Metrics.Formatters.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Aq.ExpressionJsonSerializer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.0.8.0\lib\netstandard2.0\Aq.ExpressionJsonSerializer.dll</HintPath>
+      <HintPath>..\..\..\packages\DotNetWorkQueue.0.9.18\lib\net48\Aq.ExpressionJsonSerializer.dll</HintPath>
     </Reference>
     <Reference Include="Azure.Core, Version=1.50.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Azure.Core.1.50.0\lib\net472\Azure.Core.dll</HintPath>
@@ -63,20 +45,17 @@
     <Reference Include="Azure.Identity, Version=1.17.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Azure.Identity.1.17.1\lib\netstandard2.0\Azure.Identity.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetWorkQueue, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.0.8.0\lib\netstandard2.0\DotNetWorkQueue.dll</HintPath>
+    <Reference Include="DotNetWorkQueue, Version=0.9.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DotNetWorkQueue.0.9.18\lib\net48\DotNetWorkQueue.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetWorkQueue.AppMetrics, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.AppMetrics.0.8.0\lib\netstandard2.0\DotNetWorkQueue.AppMetrics.dll</HintPath>
+    <Reference Include="DotNetWorkQueue.Transport.RelationalDatabase, Version=0.9.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DotNetWorkQueue.Transport.RelationalDatabase.0.9.18\lib\net48\DotNetWorkQueue.Transport.RelationalDatabase.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetWorkQueue.Transport.RelationalDatabase, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.Transport.RelationalDatabase.0.8.0\lib\netstandard2.0\DotNetWorkQueue.Transport.RelationalDatabase.dll</HintPath>
+    <Reference Include="DotNetWorkQueue.Transport.Shared, Version=0.9.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DotNetWorkQueue.Transport.Shared.0.9.18\lib\net48\DotNetWorkQueue.Transport.Shared.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetWorkQueue.Transport.Shared, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.Transport.Shared.0.8.0\lib\netstandard2.0\DotNetWorkQueue.Transport.Shared.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetWorkQueue.Transport.SqlServer, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.Transport.SqlServer.0.8.0\lib\netstandard2.0\DotNetWorkQueue.Transport.SqlServer.dll</HintPath>
+    <Reference Include="DotNetWorkQueue.Transport.SqlServer, Version=0.9.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DotNetWorkQueue.Transport.SqlServer.0.9.18\lib\net48\DotNetWorkQueue.Transport.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.Bcl.AsyncInterfaces.10.0.1\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -174,20 +153,11 @@
     <Reference Include="Polly, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Polly.8.6.5\lib\net472\Polly.dll</HintPath>
     </Reference>
-    <Reference Include="Polly.Caching.Memory, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Polly.Caching.Memory.3.0.2\lib\netstandard2.0\Polly.Caching.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="Polly.Contrib.Simmy, Version=0.0.0.0, Culture=neutral, PublicKeyToken=17ed651729209acc, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Polly.Contrib.Simmy.0.3.0\lib\netstandard2.0\Polly.Contrib.Simmy.dll</HintPath>
-    </Reference>
-    <Reference Include="Polly.Contrib.WaitAndRetry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=17ed651729209acc, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Polly.Contrib.WaitAndRetry.1.1.1\lib\net472\Polly.Contrib.WaitAndRetry.dll</HintPath>
-    </Reference>
     <Reference Include="Polly.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Polly.Core.8.6.5\lib\net472\Polly.Core.dll</HintPath>
     </Reference>
     <Reference Include="Schyntax, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\DotNetWorkQueue.0.8.0\lib\netstandard2.0\Schyntax.dll</HintPath>
+      <HintPath>..\..\..\packages\DotNetWorkQueue.0.9.18\lib\net48\Schyntax.dll</HintPath>
     </Reference>
     <Reference Include="SimpleInjector, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\SimpleInjector.5.5.0\lib\net461\SimpleInjector.dll</HintPath>
@@ -305,13 +275,7 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  
   <Import Project="..\..\..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets" Condition="Exists('..\..\..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -321,4 +285,4 @@
     <Error Condition="!Exists('..\..\..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
   </Target>
   <Import Project="..\..\..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\..\..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
-</Project>
+</Project>

@@ -30,15 +30,11 @@ using ConsoleShared;
 using DotNetWorkQueue;
 using DotNetWorkQueue.Configuration;
 using DotNetWorkQueue.Interceptors;
-using App.Metrics;
 
 namespace ConsoleSharedCommands.Commands
 {
     public abstract class SharedCommands : IConsoleCommand, IDisposable
     {
-        protected DotNetWorkQueue.AppMetrics.Metrics Metrics;
-        private App.Metrics.IMetricsRoot _metricsRoot;
-
         protected bool Gzip;
         protected bool Des;
         protected TripleDesMessageInterceptorConfiguration DesConfiguration;
@@ -50,8 +46,6 @@ namespace ConsoleSharedCommands.Commands
             {
                 case "EnableStatus":
                     return new ConsoleExecuteResult("EnableStatus http://localhost:10000/");
-                case "EnableMetrics":
-                    return new ConsoleExecuteResult("EnableMetrics http://localhost:10001/ false");
                 case "EnableGzip":
                     return new ConsoleExecuteResult("EnableGzip");
                 case "EnableDes":
@@ -65,9 +59,6 @@ namespace ConsoleSharedCommands.Commands
             help.AppendLine("");
             help.AppendLine("-The following should be enabled before performing queue actions; usage is optional-");
             help.AppendLine(ConsoleFormatting.FixedLength("EnableStatus uri", "Enables the status HTTP server"));
-            help.AppendLine(ConsoleFormatting.FixedLength("EnableMetrics",
-                "Enables queue metrics"));
-            help.AppendLine(ConsoleFormatting.FixedLength("ViewMetrics", "Displays any captured metrics"));
             help.AppendLine(ConsoleFormatting.FixedLength("EnableGzip", "Enables the Gzip message interceptor"));
             help.AppendLine(ConsoleFormatting.FixedLength("EnableDes [key] [iv]",
                 "Enables Triple DES message interceptor; key/iv must be base64 strings"));
@@ -90,38 +81,6 @@ namespace ConsoleSharedCommands.Commands
             return new ConsoleExecuteResult("triple des encryption has been enabled");
         }
 
-        public ConsoleExecuteResult ViewMetrics()
-        {
-            if (Metrics != null)
-            {
-                var tasks = _metricsRoot.ReportRunner.RunAllAsync();
-                System.Threading.Tasks.Task.WaitAll(tasks.ToArray());
-            }
-            return new ConsoleExecuteResult("Metric reports have been run");
-        }
-        public ConsoleExecuteResult EnableMetrics()
-        {
-            if (Metrics != null)
-                return new ConsoleExecuteResult("Metrics already enabled");
-
-            _metricsRoot = new App.Metrics.MetricsBuilder()
-                .Configuration.Configure(
-                    options =>
-                    {
-                        options.DefaultContextLabel = "ExampleApp";
-                        options.Enabled = true;
-                        options.ReportingEnabled = true;
-                    })
-                .Report.ToConsole(
-                    options =>
-                    {
-                        options.FlushInterval = TimeSpan.FromSeconds(5);
-                    })
-                .Build();
-
-            Metrics = new DotNetWorkQueue.AppMetrics.Metrics(_metricsRoot);
-            return new ConsoleExecuteResult($"Metrics enabled");
-        }
 
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
@@ -138,7 +97,6 @@ namespace ConsoleSharedCommands.Commands
         /// <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
         {
-            Metrics?.Dispose();
         }
     }
 

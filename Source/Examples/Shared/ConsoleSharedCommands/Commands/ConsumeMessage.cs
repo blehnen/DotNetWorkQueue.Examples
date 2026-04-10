@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------
+// ---------------------------------------------------------------------
 // Copyright © 2015-2020 Brian Lehnen
 // 
 // All rights reserved.
@@ -166,7 +166,6 @@ namespace ConsoleSharedCommands.Commands
             if (valid != null) return valid;
             Queues[queueName].Configuration.Worker.WorkerCount = workerCount;
             Queues[queueName].Configuration.Worker.SingleWorkerWhenNoWorkFound = singleWorkerWhenNoWorkFound;
-            Queues[queueName].Configuration.Worker.AbortWorkerThreadsWhenStopping = abortWorkerThreadsWhenStopping;
             if (timeToWaitForWorkersToCancel.HasValue)
             {
                 Queues[queueName].Configuration.Worker.TimeToWaitForWorkersToCancel =
@@ -269,10 +268,6 @@ namespace ConsoleSharedCommands.Commands
 
         protected void RegisterService(IContainer container)
         {
-            if (Metrics != null)
-            {
-                container.Register<IMetrics>(() => Metrics, LifeStyles.Singleton);
-            }
 
             if (Des)
             {

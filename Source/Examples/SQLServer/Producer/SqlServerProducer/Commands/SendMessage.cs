@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------
+// ---------------------------------------------------------------------
 // Copyright © 2015-2020 Brian Lehnen
 // 
 // All rights reserved.
@@ -65,10 +65,6 @@ namespace SqlServerProducer.Commands
 
         private void RegisterService(IContainer container)
         {
-            if (Metrics != null)
-            {
-                container.Register<IMetrics>(() => Metrics, LifeStyles.Singleton);
-            }
 
             if (Des && Gzip)
             {
