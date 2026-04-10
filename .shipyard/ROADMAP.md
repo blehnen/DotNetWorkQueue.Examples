@@ -43,12 +43,13 @@ Each phase is a single atomic commit (or short commit chain) with an explicit re
 
 ---
 
-## Phase 3 — Package Bump + AppMetrics Strip (Atomic)
+## Phase 3 — Package Bump + AppMetrics Strip (Atomic) — ✅ COMPLETE (2026-04-10)
 
 - **Depends on:** Phase 2
-- **Delivers:** R6, R7, R8, R9
-- **Effort:** M (3–6h)
+- **Delivers:** R6, R7, R8, R9, R11
+- **Effort:** M (3–6h) — actual: compressed into main-context execution after 3 consecutive builder agent timeouts
 - **Risk:** **MEDIUM** — this is the highest-risk phase in the freeze.
+- **Actual outcome:** Atomic commit `30298fd`, 61 files changed (20 csproj + 16 App.config + 17 packages.config + 8 .cs). 0 warnings / 0 errors post-build. One non-metrics breaking change absorbed (`AbortWorkerThreadsWhenStopping` removed in DNWQ 0.9.13) + one missed-removal fix (`Metrics?.Dispose()`), all within the absorption budget (3 of 10 files, 1 of 3 iterations). Three plan defects documented in SUMMARY-3.1.md for retrospective (ElementTree namespace bug, `msbuild /t:Restore` no-op for packages.config, orphaned HintPaths for vendored DLLs).
 
 **Why MEDIUM:** Bumping `DotNetWorkQueue` 0.8.0 → 0.9.18 crosses a major version of internal API surface (ten minor releases). The PROJECT.md non-goal R11 explicitly says "treat any additional break as a scope-check trigger" — this phase is where such breaks will surface. Removing AppMetrics is also coupled to the package bump: you cannot remove the AppMetrics package without simultaneously removing the `using App.Metrics` lines and DI registration calls in example code, or every consumer/producer project fails to compile.
 
