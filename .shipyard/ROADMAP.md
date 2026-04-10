@@ -6,12 +6,13 @@ Each phase is a single atomic commit (or short commit chain) with an explicit re
 
 ---
 
-## Phase 1 — Spike & Baseline Capture
+## Phase 1 — Spike & Baseline Capture — ✅ COMPLETE (2026-04-10)
 
 - **Depends on:** none
 - **Delivers:** R1, R2, plus baseline-warning capture (NFR "Baseline warning discipline")
 - **Effort:** XS (<1h)
 - **Risk:** LOW
+- **Actual outcome:** GO for Phase 2. Baseline = 0 warnings, 0 errors. 8 DNWQ packages (not 6) confirmed at 0.9.18. See `.shipyard/phases/1/SPIKE-NOTES.md`.
 
 **Work:**
 1. Query NuGet for `DotNetWorkQueue`, `DotNetWorkQueue.Transport.SqlServer`, `.PostgreSQL`, `.SQLite`, `.LiteDb`, `.Redis` at `0.9.18`. Confirm all six publish a matching version. If any transport lags, **STOP** and raise scope question (R1).
