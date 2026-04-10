@@ -1,0 +1,13 @@
+# Windows-authored repo; preserve CRLF in the working tree.
+* text=auto eol=crlf
+
+# Binary assets that must never be text-normalized.
+*.dll binary
+*.exe binary
+*.pdb binary
+*.nupkg binary
+*.snk binary
+*.png binary
+*.ico binary
+*.jpg binary
+*.gif binary
