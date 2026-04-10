@@ -23,12 +23,13 @@ Each phase is a single atomic commit (or short commit chain) with an explicit re
 
 ---
 
-## Phase 2 — TFM Bump to net48 (Atomic)
+## Phase 2 — TFM Bump to net48 (Atomic) — ✅ COMPLETE (2026-04-10)
 
 - **Depends on:** Phase 1
-- **Delivers:** R3, R4, R5
+- **Delivers:** R3, R4, R5 (R5 deferred to Phase 3 by design — see CONTEXT-2.md)
 - **Effort:** S (1–3h)
 - **Risk:** LOW — net472 → net48 is a tiny BCL delta; net452 → net48 on 4 shared libs is the only project-graph change with any meaningful surface, but those projects only consume `ConsoleView`/WinForms BCL types that exist in both targets.
+- **Actual outcome:** Atomic commit `4ef2d29`, 53 files changed (20 csproj + 16 App.config + 17 packages.config), 0 warnings / 0 errors post-build — baseline discipline preserved. HintPaths intentionally deferred to Phase 3. See `.shipyard/phases/2/results/SUMMARY-2.1.md`.
 
 **Work:**
 1. Update `<TargetFrameworkVersion>` to `v4.8` in all 20 csproj files under `Source/Examples/` (15 runnable + 5 shared, including `ConsoleSharedCommands` from net472 and `ConsoleShared`/`ConsoleView`/`ExampleMessage`/`ShellControlV2` from net452) — R3.
