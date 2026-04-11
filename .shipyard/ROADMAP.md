@@ -66,12 +66,13 @@ Each phase is a single atomic commit (or short commit chain) with an explicit re
 
 ---
 
-## Phase 4 — Code & Repo Hygiene
+## Phase 4 — Code & Repo Hygiene — ✅ COMPLETE (2026-04-11)
 
 - **Depends on:** Phase 3
 - **Delivers:** R10, R12, R13, R14, R15 (R11 is absorbed inside Phase 3 if it triggered)
 - **Effort:** S (1–3h)
 - **Risk:** LOW — these edits do not interact with the build graph.
+- **Actual outcome:** 8 hygiene edits landed atomically. LiteDb namespace typo fixed, SharedAssemblyInfo at 0.9.18, 4 orphaned Rpc directories purged, SQL Server + Postgres App.config IPs corrected to 192.168.0.2. R14 was a no-op (gitignore already correct). Build still 0 warnings / 0 errors. Plan and summary written post-hoc after `/shipyard:resume` recovered pre-existing working-tree edits. See `.shipyard/phases/4/results/SUMMARY-4.1.md`.
 
 **Work:**
 1. Fix `Source/Examples/LiteDb/Consumer/LiteDbConsumer/Commands/ConsumeMessage.cs`: rename declared namespace `SQLiteConsumer.Commands` → `LiteDbConsumer.Commands`. Update any `using` statements that follow — R10.

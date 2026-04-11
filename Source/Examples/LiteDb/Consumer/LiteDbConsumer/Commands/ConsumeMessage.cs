@@ -27,7 +27,7 @@ using ConsoleShared;
 using ConsoleSharedCommands.Commands;
 using DotNetWorkQueue.Transport.LiteDb.Basic;
 
-namespace SQLiteConsumer.Commands
+namespace LiteDbConsumer.Commands
 {
     public class ConsumeMessage : SharedConsumeMessage<LiteDbMessageQueueInit>
     {
