@@ -106,12 +106,13 @@ Each phase is a single atomic commit (or short commit chain) with an explicit re
 
 ---
 
-## Phase 6 — Documentation
+## Phase 6 — Documentation — ✅ COMPLETE (2026-04-11)
 
 - **Depends on:** Phase 5 (docs reflect the actual final state, including the CI badge if added)
 - **Delivers:** R16, R17
 - **Effort:** XS (<1h)
 - **Risk:** LOW
+- **Actual outcome:** README FROZEN banner prepended above existing title (no existing content modified). CLAUDE.md finalized and committed for the first time — TFM updated to 4.8, 0.9.18 pin noted, WSL MSBuild-path bonus hygiene added. See SUMMARY-6.1.md.
 
 **Work:**
 1. Rewrite the top of `README.md`: frozen banner naming **DotNetWorkQueue 0.9.18 + .NET Framework 4.8**, one-paragraph reason (upstream moved to net10/net8 in 0.9.19), link to `https://github.com/blehnen/DotNetWorkQueue.Samples` for current usage and metrics. Preserve the existing transport bullet list and license section below — R16.
