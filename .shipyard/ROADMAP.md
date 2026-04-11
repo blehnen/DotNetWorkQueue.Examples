@@ -86,12 +86,13 @@ Each phase is a single atomic commit (or short commit chain) with an explicit re
 
 ---
 
-## Phase 5 — CI Workflow
+## Phase 5 — CI Workflow — ✅ COMPLETE (2026-04-11)
 
 - **Depends on:** Phase 4 (code must be stable so the first CI run is meaningful)
-- **Delivers:** R-CI-1, R-CI-2, R-CI-3
+- **Delivers:** R-CI-1, R-CI-2, R-CI-3 (last one is deferred until user pushes to GitHub)
 - **Effort:** XS (<1h) for the file; verification depends on push timing
 - **Risk:** LOW — the workflow is small and uses well-known marketplace actions. The only failure mode is a runner-environment mismatch with the local build, which is exactly what we want to discover before freezing.
+- **Actual outcome:** `.github/workflows/ci.yml` written with msbuild + nuget.exe toolchain (not dotnet build — the Samples repo uses SDK-style csproj and thus setup-dotnet, but this repo is classic csproj + packages.config). Single job on `windows-latest`, triggers on push+PR to main. No schedule trigger. See `.shipyard/phases/5/results/SUMMARY-5.1.md`.
 
 **Work:**
 1. Create `.github/workflows/ci.yml`:
