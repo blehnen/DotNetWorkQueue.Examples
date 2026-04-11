@@ -1,3 +1,20 @@
+> **⚠ This repository is frozen.**
+>
+> This example set is pinned at **DotNetWorkQueue 0.9.18** targeting
+> **.NET Framework 4.8** — the last upstream release that supports
+> net48. DotNetWorkQueue 0.9.19 dropped .NET Framework in favor of
+> .NET 10 / .NET 8 only, so this repo cannot follow forward without
+> losing the classic-csproj identity that differentiates it from the
+> newer samples repository.
+>
+> For current usage, modern APIs, and the up-to-date metrics story,
+> see [DotNetWorkQueue.Samples](https://github.com/blehnen/DotNetWorkQueue.Samples).
+>
+> This repo now receives no further updates. The examples still build
+> cleanly against the pinned package set on .NET Framework 4.8.
+
+---
+
 DotNetWorkQueue.Examples
 =========
 
