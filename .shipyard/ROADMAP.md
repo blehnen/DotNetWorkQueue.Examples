@@ -1,5 +1,7 @@
 # ROADMAP — examples-freeze
 
+**Project status: FROZEN as of 2026-04-11.** All 7 phases complete. `freeze` tag stamped. See `.shipyard/phases/7/VERIFICATION.md` for the 10-point PROJECT.md success criteria checklist.
+
 Freeze `DotNetWorkQueue.Examples` at DotNetWorkQueue **0.9.18** / **.NET Framework 4.8**. One-way door. Single focused session, sized in hours.
 
 Each phase is a single atomic commit (or short commit chain) with an explicit revert point. Phases are strictly sequential — the freeze does not parallelize.
@@ -122,12 +124,13 @@ Each phase is a single atomic commit (or short commit chain) with an explicit re
 
 ---
 
-## Phase 7 — Verification & Freeze Commit
+## Phase 7 — Verification & Freeze Commit — ✅ COMPLETE (2026-04-11)
 
 - **Depends on:** Phase 6
 - **Delivers:** R18, R19, R20
 - **Effort:** S (1–3h), dominated by manual smoke tests
 - **Risk:** **MEDIUM** — R19 is the hard manual gate and the only end-to-end runtime check the project receives. R20 depends on remote service availability that is outside this project's control.
+- **Actual outcome:** R18 PASS (0/0 build), R19 PASS (LiteDb round-trip; 4 mid-test fixes required — App.config namespace, CLAUDE.md syntax, method signatures, c:\temp\ dir), R20 SKIPPED (all 3 remotes not attempted, ships per best-effort allowance). Phase 7 Task 2 inline-fixed a Phase 3 bug: ElementTree had corrupted App.config XML namespace semantics causing .NET Framework side-by-side config error at runtime. Fixed via sed across all 16 App.config files and committed as part of the freeze. See SUMMARY-7.1.md + VERIFICATION.md.
 
 **Why MEDIUM:** R19 is **mandatory** and blocks the freeze. If the SQLite/LiteDb round-trip fails, the freeze does not ship and you re-open Phase 3. R20 is best-effort but discovering a transport that cannot connect to `192.168.0.2` after the IP correction in Phase 4 still requires diagnosis to know whether it's a service-down problem or a code-level regression.
 
